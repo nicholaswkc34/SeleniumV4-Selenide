@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-21T17:46:35 SGT" name="Surefire suite" finished-at="2022-10-21T17:46:42 SGT" duration-ms="7498">
+    <groups>
+    </groups>
+    <test started-at="2022-10-21T17:46:35 SGT" name="Surefire test" finished-at="2022-10-21T17:46:42 SGT" duration-ms="7498">
+      <class name="com.nicholas.manager.GenericTestManager">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.nicholas.manager.GenericTestManager@38f57b3d]" started-at="2022-10-21T17:46:35 SGT" name="init" finished-at="2022-10-21T17:46:35 SGT" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:com.nicholas.manager.GenericTestManager@38f57b3d]" started-at="2022-10-21T17:46:35 SGT" name="openPage" finished-at="2022-10-21T17:46:42 SGT" duration-ms="7101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="testLogin()[pri:0, instance:com.nicholas.manager.GenericTestManager@38f57b3d]" started-at="2022-10-21T17:46:42 SGT" name="testLogin" finished-at="2022-10-21T17:46:42 SGT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:com.nicholas.manager.GenericTestManager@38f57b3d]" started-at="2022-10-21T17:46:42 SGT" name="cleanup" finished-at="2022-10-21T17:46:42 SGT" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nicholas.manager.GenericTestManager@38f57b3d]" started-at="2022-10-21T17:46:42 SGT" name="tearDown" finished-at="2022-10-21T17:46:43 SGT" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.nicholas.manager.GenericTestManager -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
