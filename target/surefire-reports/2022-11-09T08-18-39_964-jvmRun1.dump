@@ -1,0 +1,26 @@
+# Created at 2022-11-09T08:18:40.750
+java.lang.ExceptionInInitializerError
+	at org.slf4j.reload4j.Reload4jServiceProvider.initialize(Reload4jServiceProvider.java:35)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:152)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:139)
+	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:422)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:408)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.testng.log4testng.Logger.lambda$getLogger$0(Logger.java:30)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.testng.log4testng.Logger.getLogger(Logger.java:30)
+	at org.testng.TestNG.<clinit>(TestNG.java:110)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:111)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:98)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Caused by: java.lang.IllegalStateException: Detected both log4j-over-slf4j.jar AND bound slf4j-log4j12.jar on the class path, preempting StackOverflowError. See also http://www.slf4j.org/codes.html#log4jDelegationLoop for more details.
+	at org.slf4j.reload4j.Reload4jLoggerFactory.<clinit>(Reload4jLoggerFactory.java:54)
+	... 19 more
+
+

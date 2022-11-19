@@ -1,5 +1,6 @@
 package com.nicholas.manager;
 
+import com.aspose.email.*;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.MultiPartEmail;
@@ -22,7 +23,7 @@ public class MailerManager {
 	public MailerManager() {
 	}
 	
-	public synchronized void sendEmail() {
+	/*public synchronized void sendEmail() {
 		try {
 			// Create the attachment
 			EmailAttachment attachment = new EmailAttachment();
@@ -62,10 +63,54 @@ public class MailerManager {
 			log.error(ex.getMessage());
 		}
 
+	}*/
+
+	public synchronized void sendEmail() {
+		MailMessage message = new MailMessage();
+
+		message.setSubject("Automation Testing Report");
+		message.setBody("Dear Stakeholders, This is the automation testing report for your reference.");
+
+		// Set Sender
+		message.setFrom(new MailAddress("from@outlook.com", "Sender Name", false));
+		message.getTo().addItem(new MailAddress("to1@outlook.com", "Recipient 1", false));
+		message.getTo().addItem(new MailAddress("to1@outlook.com", "Recipient 1", false));
+
+		// Add attachments
+		message.getAttachments().addItem(new Attachment(".\\report\\TestReport-Spark.html"));
+
+		message.save("EmailMessage.msg", SaveOptions.getDefaultMsgUnicode());
+
+		// Create an instance of SmtpClient Class
+		SmtpClient client = new SmtpClient();
+
+		// Specify your mailing host server, Username, Password, Port
+		client.setHost("smtp.server.com");
+		client.setUsername("Username");
+		client.setPassword("Password");
+		client.setPort(25);
+
+		try {
+			// Client.Send will send this message
+			client.send(message);
+		}
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
+
+
+
 	}
 }
 // ==============================================================================================
+
+
+
 /*
+ * https://blog.aspose.com/email/create-and-send-outlook-email-messages-asynchronously-using-java/
+ *
+ *
  * https://jodd.org/email/
  * 
  * 

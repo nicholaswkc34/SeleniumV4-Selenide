@@ -28,10 +28,16 @@
             <url>https://repo.spring.io/release</url>
         </repository>
 
+        <repository>
+            <id>jira-client</id>
+            <url>https://repo1.maven.org/maven2/net/rcarz/jira-client/0.5/jira-client-0.5.jar</url>
+        </repository>
 
-
-
-
+        <repository>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>https://repository.aspose.com/repo/</url>
+        </repository>
 
 
     </repositories>
@@ -285,8 +291,26 @@
             <version>8.0.30</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.0</version>
+        </dependency>
 
+        <!-- Log defect into JIRA -->
+        <!--<dependency>
+            <groupId>net.rcarz</groupId>
+            <artifactId>jira-client</artifactId>
+            <version>0.5</version>
+        </dependency>
+        -->
 
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-email</artifactId>
+            <version>21.5</version>
+            <type>pom</type>
+        </dependency>
 
 
 
