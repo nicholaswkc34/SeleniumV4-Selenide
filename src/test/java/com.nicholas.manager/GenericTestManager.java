@@ -17,7 +17,6 @@ public class GenericTestManager extends TestManager {
 
     @BeforeMethod
     public void openPage() {
-        //Configuration.browser = System.getProperty("browser");
         //Configuration.headless = true;
         Configuration.timeout = 10000;
         open("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -29,7 +28,7 @@ public class GenericTestManager extends TestManager {
         clearBrowserLocalStorage();
         executeJavaScript("sessionStorage.clear();");
     }
-
+        
     @AfterSuite
     public void tearDown() {
         // Write to html file
