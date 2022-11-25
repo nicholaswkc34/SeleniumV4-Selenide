@@ -45,14 +45,17 @@ public class GenericTestManager extends TestManager {
     @Test
     public void testLogin() {
         extentTest = extentManager.getExtentReports().createTest("Test 1");
-        //$("asdasd").setValue("asdasd");
-
+        //$("xpath").setValue("asdasd");
 
     }
 }
 
 /*
 mvn dependency:tree or gradle dependencies
+
+Maven surefire Debug Mode
+-DforkCount=0 -Dselenide.browser=chrome test
+
 
 https://github.com/soydivision/Selenide-quick-FAQ
 
